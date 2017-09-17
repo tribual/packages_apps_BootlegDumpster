@@ -37,6 +37,11 @@
             android:entryValues="@array/status_bar_battery_percentage_values"
             android:defaultValue="0" />
 
+     <Preference
+        android:key="network_traffic"
+        android:fragment="com.bootleg.dumpster.fragments.NetworkTraffic"
+        android:title="@string/traffic_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
