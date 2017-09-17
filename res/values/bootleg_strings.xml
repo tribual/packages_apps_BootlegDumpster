@@ -185,4 +185,10 @@
     <string name="lock_screen_weather_style_title">Show weather with Pixel style</string>
     <string name="lock_screen_weather_style_summary">Instead of using the big widget, it\'ll show next to the date</string>
 
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Traffic indicators</string>
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
 </resources>
