@@ -19,6 +19,8 @@
     <string name="category_misc_title">Misc</string>
 
     <!-- Subcategories -->
+    <string name="subcategory_app_compatibility">Compatibility</string>
+
     <!-- Interface -->
     <string name="statusbar_title">Status Bar</string>
     <string name="statusbar_summary">The statusbar is nice but it could be better</string>
@@ -182,4 +184,7 @@
     <string name="lock_screen_weather_style_title">Show weather with Pixel style</string>
     <string name="lock_screen_weather_style_summary">Instead of using the big widget, it\'ll show next to the date</string>
 
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
 </resources>
