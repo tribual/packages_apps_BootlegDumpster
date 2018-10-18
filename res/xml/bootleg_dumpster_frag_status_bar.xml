@@ -18,4 +18,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/statusbar_title">
 
+    <PreferenceCategory
+        android:key="statusbar_misc_cat"
+        android:title="@string/category_misc_title">
+
+     <com.bootleggers.support.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_to_sleep_title"
+        android:summary="@string/double_tap_to_sleep_statusbar_summary"
+        android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
