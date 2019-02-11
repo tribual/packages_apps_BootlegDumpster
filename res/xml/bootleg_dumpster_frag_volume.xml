@@ -19,6 +19,18 @@
     android:title="@string/volume_title">
 
     <PreferenceCategory
+        android:key="volume_style_cat"
+        android:title="@string/subcategory_volume_style">
+
+        <com.bootleggers.support.preferences.SystemSettingSwitchPreference
+             android:key="volume_panel_on_left"
+             android:title="@string/volume_panel_on_left_title"
+             android:summary="@string/volume_panel_on_left_summary"
+             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="volume_gestures_cat"
         android:title="@string/gestures_title">
 

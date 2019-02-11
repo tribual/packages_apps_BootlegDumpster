@@ -24,6 +24,7 @@
     <string name="subcategory_quicksettings_tiles">Tiles</string>
     <string name="subcategory_notification_heads_up">Heads up</string>
     <string name="subcategory_statusbar_icons">Icons</string>
+    <string name="subcategory_volume_style">UI and style</string>
 
     <!-- Interface -->
     <string name="statusbar_title">Status Bar</string>
@@ -249,5 +250,10 @@
     <string name="adaptive_playback_timeout_2_min">2 minutes</string>
     <string name="adaptive_playback_timeout_5_min">5 minutes</string>
     <string name="adaptive_playback_timeout_10_min">10 minutes</string>
+
+    <!-- Volume Panel on Left -->
+    <string name="volume_panel_category">Volume panel</string>
+    <string name="volume_panel_on_left_title">Volume Panel on Left</string>
+    <string name="volume_panel_on_left_summary">Change volume panel from right side to left side</string>
 
 </resources>
