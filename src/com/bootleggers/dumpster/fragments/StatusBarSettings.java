@@ -41,7 +41,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.bootleg_dumpster_statusbar);
+        addPreferencesFromResource(R.xml.bootleg_dumpster_frag_status_bar);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 

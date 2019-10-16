@@ -32,7 +32,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.bootleg_dumpster_quicksettings);
+        addPreferencesFromResource(R.xml.bootleg_dumpster_frag_quick_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();

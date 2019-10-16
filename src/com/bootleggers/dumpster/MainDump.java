@@ -23,19 +23,66 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.Surface;
+import android.view.View;
+import android.view.ViewGroup;
 import android.preference.Preference;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import com.android.settings.R;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+
+import com.bootleggers.dumpster.categories.Buttons;
+import com.bootleggers.dumpster.categories.Interface;
+import com.bootleggers.dumpster.categories.Misc;
+import com.bootleggers.dumpster.categories.Tweaks;
 
 import com.android.settings.SettingsPreferenceFragment;
 
 public class MainDump extends SettingsPreferenceFragment {
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.layout_dumpster, container, false);
+        final BottomNavigationView bottomNavigation = (BottomNavigationView) view.findViewById(R.id.bottom_navigation);
+        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+          public boolean onNavigationItemSelected(MenuItem item) {
+                 if (item.getItemId() == bottomNavigation.getSelectedItemId()) {
+                   return false;
+                 } else {
+                    if (item.getItemId() == R.id.interface_category) {
+                        switchFrag(new Interface());
+                    } else if (item.getItemId() == R.id.tweaks_category) {
+                        switchFrag(new Tweaks());
+                    } else if (item.getItemId() == R.id.buttons_category) {
+                        switchFrag(new Buttons());
+                    } else if (item.getItemId() == R.id.misc_category) {
+                        switchFrag(new Misc());
+                    }
+                    return true;
+                 }
+          }
+        });
+        setHasOptionsMenu(true);
+        bottomNavigation.setSelectedItemId(R.id.interface_category);
+        switchFrag(new Interface());
+        bottomNavigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_AUTO);
+        return view;
+    }
+
+    private void switchFrag(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_frame, fragment).commit();
+    }
+
+    @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        addPreferencesFromResource(R.xml.bootleg_dumpster);
+        setRetainInstance(true);
     }
 
     @Override

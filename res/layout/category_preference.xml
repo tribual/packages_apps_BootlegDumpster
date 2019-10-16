@@ -54,7 +54,7 @@
                     android:layout_height="@dimen/catpreference_icon_size"
                     android:scaleType="fitXY"
                     android:layout_gravity="center"
-                    android:tint="?android:attr/colorAccent" />
+                    android:tint="@color/preference_icon_color" />
 
             </LinearLayout>
 

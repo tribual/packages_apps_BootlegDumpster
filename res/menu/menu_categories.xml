@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/interface_category"
+            android:icon="@drawable/ic_category_interface"
+            android:title="@string/category_interface_title" />
+
+    <item
+            android:id="@+id/tweaks_category"
+            android:icon="@drawable/ic_category_tweaks"
+            android:title="@string/category_tweaks_title" />
+
+    <item
+            android:id="@+id/buttons_category"
+            android:icon="@drawable/ic_category_buttons"
+            android:title="@string/category_buttons_title" />
+
+    <item
+            android:id="@+id/misc_category"
+            android:icon="@drawable/ic_category_misc"
+            android:title="@string/category_misc_title" />                                            
+
+</menu>

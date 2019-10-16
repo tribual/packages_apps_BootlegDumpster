@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 Nitrogen Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <com.bootleggers.dumpster.preferences.CategoryPreference
+        android:key="volume_category"
+        android:icon="@drawable/ic_subcategory_volume"
+        android:title="@string/volume_title"
+        android:summary="@string/volume_summary"
+        android:fragment="com.bootleggers.dumpster.fragments.VolumeSettings" />
+
+    <com.bootleggers.dumpster.preferences.CategoryPreference
+        android:key="powermenu_category"
+        android:icon="@drawable/ic_subcategory_power_menu"
+        android:title="@string/powermenu_title"
+        android:summary="@string/powermenu_summary"
+        android:fragment="com.bootleggers.dumpster.fragments.PowerMenuSettings" />
+
+    <com.bootleggers.dumpster.preferences.CategoryPreference
+        android:key="navbar_category"
+        android:icon="@drawable/ic_subcategory_navbar"
+        android:title="@string/navbar_title"
+        android:summary="@string/navbar_summary"
+        android:fragment="com.bootleggers.dumpster.fragments.NavBarSettings" />
+
+    <com.bootleggers.dumpster.preferences.CategoryPreference
+        android:key="hwkeys_category"
+        android:icon="@drawable/ic_subcategory_hwkeys"
+        android:title="@string/hwkeys_title"
+        android:summary="@string/hwkeys_summary"
+        android:fragment="com.bootleggers.dumpster.fragments.HwKeysSettings" />
+
+    <com.bootleggers.dumpster.preferences.CategoryPreference
+        android:key="fingerprint_category"
+        android:icon="@drawable/ic_subcategory_fingerprint"
+        android:title="@string/fingerprint_title"
+        android:summary="@string/fingerprint_summary"
+        android:fragment="com.bootleggers.dumpster.fragments.FingerprintSettings" />
+
+</PreferenceScreen>

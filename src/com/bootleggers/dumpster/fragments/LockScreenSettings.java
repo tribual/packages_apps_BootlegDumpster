@@ -44,7 +44,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.bootleg_dumpster_lockscreen);
+        addPreferencesFromResource(R.xml.bootleg_dumpster_frag_lockscreen);
 
         ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();

@@ -28,7 +28,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.bootleg_dumpster_recents);
+        addPreferencesFromResource(R.xml.bootleg_dumpster_frag_recents);
 
         ContentResolver resolver = getActivity().getContentResolver();
 
