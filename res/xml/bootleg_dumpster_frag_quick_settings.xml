@@ -29,6 +29,19 @@
         android:entryValues="@array/quick_pulldown_values"
         android:persistent="false" />
 
-    </PreferenceCategory>
+   </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="quicksettings_ui_stuff"
+        android:title="@string/category_interface_title">
+
+    <!-- Battery mode -->
+    <com.bootleggers.dumpster.preferences.SystemSettingListPreference
+        android:key="qs_battery_mode"
+        android:title="@string/battery_percentage_title"
+        android:entries="@array/qs_battery_mode_entries"
+        android:entryValues="@array/qs_battery_mode_values"
+        android:defaultValue="1" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
