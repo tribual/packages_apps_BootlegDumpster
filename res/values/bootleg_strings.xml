@@ -228,4 +228,11 @@
     <!-- QS tile visibility -->
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
     <string name="qs_tile_title_visibility_summary">Show or hide the QS tiles title</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_gesture_title">Screen off torch</string>
+    <string name="power_button_torch_gesture_none">Disabled</string>
+    <string name="power_button_torch_gesture_dt">Double tap power button</string>
+    <string name="power_button_torch_gesture_lp">Long press power button</string>
+
 </resources>
