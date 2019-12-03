@@ -19,6 +19,18 @@
     android:title="@string/quicksettings_title">
 
     <PreferenceCategory
+        android:key="quickset_footer_cat"
+        android:title="@string/subcategory_quicksettings_footer">
+
+        <com.bootleggers.support.preferences.SystemSettingSwitchPreference
+            android:key="footer_text_show"
+            android:title="@string/footer_text_show_title"
+            android:summary="@string/footer_text_show_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="quickset_random_misc"
         android:title="@string/category_misc_title">
 
