@@ -52,6 +52,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String KEY_LOCKSCREEN_WEATHER_STYLE = "lockscreen_weather_style";
     private static final String KEY_LOCKSCREEN_WEATHER_CITY = "lockscreen_weather_show_city";
     private static final String KEY_LOCKSCREEN_WEATHER_TEMP = "lockscreen_weather_show_temp";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
 
     private PreferenceCategory mLockscreenUI;
     private SystemSettingListPreference mLockscreenMediaFilter;
@@ -61,6 +62,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mLockscreenWeatherCity;
     private SystemSettingSwitchPreference mLockscreenWeatherTemp;
     private PreferenceCategory mLsMisc;
+    private Preference mFODIconPicker;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -92,6 +94,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         		updatePrefsVisiblities();
         		return true;
         	}
+        mFODIconPicker = (Preference) findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPicker != null
+                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
+            prefScreen.removePreference(mFODIconPicker);
+        }
+
     	});
 
         int value = Settings.System.getInt(getContentResolver(),

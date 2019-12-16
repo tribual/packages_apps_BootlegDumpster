@@ -530,4 +530,10 @@
     <string name="qs_show_brightness_summary">Show a brightness slider in the quick settings panel</string>
     <string name="qs_brightness_position_bottom_title">Brightness slider on bottom</string>
     <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
+
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">FOD icon picker</string>
+    <string name="fod_icon_picker_summary">Choose your favorite fingerprint icon</string>
+    <string name="fod_icon_picker_footer">In order to add your own icon, select the top left icon and use the OnePlus 6T FP Customizer app to select the icon you want.</string>
+
 </resources>
