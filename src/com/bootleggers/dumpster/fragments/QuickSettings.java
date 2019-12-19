@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.res.Resources;
@@ -25,6 +26,7 @@ import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
 
+import com.bootleggers.support.preferences.SystemSettingEditTextPreference;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -33,8 +35,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
 
     private ListPreference mQuickPulldown;
+    private SystemSettingEditTextPreference mFooterString;
+    private String mFooterFallbackString;
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
+    private static final String FOOTER_TEXT_STRING = "footer_text_string";
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -52,6 +57,19 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
 
+        mFooterString = (SystemSettingEditTextPreference) findPreference(FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String buildType = SystemProperties.get("ro.bootleggers.releasetype", "KeepTheBootleg");
+        mFooterFallbackString = "#" + buildType;
+        String footerString = Settings.System.getString(getContentResolver(),
+                FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "") {
+            mFooterString.setText(footerString);
+        } else {
+            mFooterString.setText(mFooterFallbackString);
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.FOOTER_TEXT_STRING, mFooterFallbackString);
+        }
     }
 
     private void updatePulldownSummary(int value) {
@@ -81,6 +99,19 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                     quickPulldownValue, UserHandle.USER_CURRENT);
                 updatePulldownSummary(quickPulldownValue);
                 return true;
+
+            case FOOTER_TEXT_STRING:
+                String text = (String) newValue;
+                if (text != "" && text != null)
+                    Settings.System.putString(getActivity().getContentResolver(),
+                            Settings.System.FOOTER_TEXT_STRING, text);
+                else {
+                    mFooterString.setText(mFooterFallbackString);
+                    Settings.System.putString(getActivity().getContentResolver(),
+                            Settings.System.FOOTER_TEXT_STRING, mFooterFallbackString);
+                }
+                return true;
+
             default:
                 return false;
         }
