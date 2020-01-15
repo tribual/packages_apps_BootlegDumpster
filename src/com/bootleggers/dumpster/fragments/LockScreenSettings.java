@@ -52,7 +52,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String KEY_LOCKSCREEN_WEATHER_STYLE = "lockscreen_weather_style";
     private static final String KEY_LOCKSCREEN_WEATHER_CITY = "lockscreen_weather_show_city";
     private static final String KEY_LOCKSCREEN_WEATHER_TEMP = "lockscreen_weather_show_temp";
-    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
     private PreferenceCategory mLockscreenUI;
     private SystemSettingListPreference mLockscreenMediaFilter;
@@ -62,7 +62,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private SystemSettingSwitchPreference mLockscreenWeatherCity;
     private SystemSettingSwitchPreference mLockscreenWeatherTemp;
     private PreferenceCategory mLsMisc;
-    private Preference mFODIconPicker;
+    private PreferenceCategory mFODIconPickerCategory;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -88,17 +88,18 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             mLsMisc.removePreference(mFingerprintUnlock);
         }
 
+        mFODIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPickerCategory != null
+                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
+            prefScreen.removePreference(mFODIconPickerCategory);
+        }
+
         mLockscreenMediaFilter.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
         	@Override
         	public boolean onPreferenceChange(Preference preference, Object newVal) {
         		updatePrefsVisiblities();
         		return true;
         	}
-        mFODIconPicker = (Preference) findPreference(FOD_ICON_PICKER_CATEGORY);
-        if (mFODIconPicker != null
-                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
-            prefScreen.removePreference(mFODIconPicker);
-        }
 
     	});
 
