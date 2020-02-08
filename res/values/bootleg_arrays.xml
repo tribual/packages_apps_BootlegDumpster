@@ -263,7 +263,6 @@
         <item>@string/status_bar_battery_style_icon_portrait</item>	
         <item>@string/status_bar_battery_style_circle</item>
         <item>@string/status_bar_battery_style_dotted_circle</item>
-        <item>@string/status_bar_battery_style_filled_circle</item>
         <item>@string/status_bar_battery_style_hidden</item>
     </string-array>
     <string-array name="status_bar_battery_style_values" translatable="false">
@@ -271,7 +270,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>4</item>
     </string-array>
 
     <string-array name="status_bar_battery_percentage_entries" translatable="false">
@@ -284,4 +282,26 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <!-- FOD Recognizing fingerprint animations -->
+    <string-array name="fod_recog_animation_entries" translatable="false">
+        <item>@string/fod_recog_animation_miui_normal</item>
+        <item>@string/fod_recog_animation_miui_aod</item>
+        <item>@string/fod_recog_animation_miui_light</item>
+        <item>@string/fod_recog_animation_miui_pop</item>
+        <item>@string/fod_recog_animation_miui_pulse</item>
+        <item>@string/fod_recog_animation_miui_pulse_white</item>
+        <item>@string/fod_recog_animation_miui_rhythm</item>
+    </string-array>
+
+    <string-array name="fod_recog_animation_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
 </resources>
