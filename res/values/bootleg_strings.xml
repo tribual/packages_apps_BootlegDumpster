@@ -238,4 +238,16 @@
     <!-- Volume key music control -->
     <string name="volume_rocker_music_controls_title">Volume Keys as Music Controls</string>
     <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+
+    <!-- Adaptive Playback -->
+    <string name="adaptive_playback_category_title">Adaptive Playback</string>
+    <string name="adaptive_playback_title">Turn on adaptive playback</string>
+    <string name="adaptive_playback_summary">Pause media when volume is muted and resume it by increasing volume within the timeout</string>
+    <string name="adaptive_playback_timeout_title">Playback timeout</string>
+    <string name="adaptive_playback_timeout_30_secs">30 seconds</string>
+    <string name="adaptive_playback_timeout_1_min">1 minute</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutes</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutes</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutes</string>
+
 </resources>
