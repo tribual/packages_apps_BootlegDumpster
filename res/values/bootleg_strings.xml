@@ -22,6 +22,7 @@
     <string name="subcategory_app_compatibility">Compatibility</string>
     <string name="subcategory_quicksettings_footer">Footer</string>
     <string name="subcategory_quicksettings_tiles">Tiles</string>
+    <string name="subcategory_notification_heads_up">Heads up</string>
 
     <!-- Interface -->
     <string name="statusbar_title">Status Bar</string>
@@ -206,4 +207,7 @@
     <string name="qs_portrait_category_title">Portrait</string>
     <string name="qs_landscape_category_title">Landscape</string>
 
+   <!-- Heads up options -->
+    <string name="less_boring_heads_up_title">Less boring heads up</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer, messaging and alarm app</string>
 </resources>
