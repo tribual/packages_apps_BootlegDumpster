@@ -124,6 +124,14 @@
     <PreferenceCategory
         android:key="quickset_random_misc"
         android:title="@string/misc_title">
+    
+    <com.bootleggers.dumpster.preferences.CustomSeekBarPreference
+        android:key="qs_blur_radius"
+        android:title="@string/qs_blur_radius_title"
+        android:summary="@string/qs_blur_radius_summary"
+        android:max="25"
+        android:min="0"
+        android:defaultValue="5" />
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="music_tile_title"

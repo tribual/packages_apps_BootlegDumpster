@@ -571,4 +571,7 @@
     <string name="fod_recog_animation_coloros7_1">ColorOS7 1</string>
     <string name="fod_recog_animation_coloros7_2">ColorOS7 2</string>
 
+    <!-- QS Blur Radius -->
+    <string name="qs_blur_radius_title">Blur intensity behind Quick Settings</string>
+    <string name="qs_blur_radius_summary">Set radius of blur behind QS panel</string>
 </resources>
