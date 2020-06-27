@@ -28,6 +28,13 @@
              android:summary="@string/volume_panel_on_left_summary"
              android:defaultValue="false" />
 
+        <com.bootleggers.support.preferences.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="@string/volume_panel_aosp_val" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
