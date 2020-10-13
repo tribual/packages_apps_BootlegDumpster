@@ -26,7 +26,7 @@
     android:foreground="?android:attr/selectableItemBackground"
     card_view:cardUseCompatPadding="true"
     card_view:cardElevation="4dp"
-    card_view:cardCornerRadius="3dp">
+    card_view:cardCornerRadius="@*android:dimen/config_dialogCornerRadius">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,16 +36,27 @@
         <LinearLayout
             android:id="@id/icon_frame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="start|center"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@android:id/icon"
+            <LinearLayout
+                android:id="@+id/icon_frame_inner"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="@dimen/catpreference_icon_header_size"
+                android:gravity="center"
                 android:background="@drawable/preference_category_background"
-                android:scaleType="center" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@android:id/icon"
+                    android:layout_width="@dimen/catpreference_icon_size"
+                    android:layout_height="@dimen/catpreference_icon_size"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:tint="?android:attr/colorAccent" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@android:id/title"

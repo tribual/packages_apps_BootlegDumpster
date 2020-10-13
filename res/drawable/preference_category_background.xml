@@ -10,8 +10,25 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<inset xmlns:android="http://schemas.android.com/apk/res/android">
-    <shape>
-        <solid android:color="@color/preference_background_color"/>
-    </shape>
-</inset>
+
+<layer-list  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/catpreference_icon_header_size">
+        <shape>
+            <solid android:color="@color/preference_background_color"/>
+        </shape>
+    </item>
+
+    <item android:gravity="center"
+        android:width="84dp"
+        android:height="84dp">
+        <vector android:width="72dp"
+                android:height="72dp"
+                android:viewportWidth="100"
+                android:viewportHeight="100">
+            <path
+                android:fillType="evenOdd"
+                android:pathData="@*android:string/config_icon_mask"
+                android:fillColor="?android:attr/colorBackground" />
+        </vector>
+    </item>
+</layer-list>
