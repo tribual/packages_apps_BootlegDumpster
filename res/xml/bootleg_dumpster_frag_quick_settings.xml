@@ -28,6 +28,12 @@
             android:summary="@string/qs_rows_columns_summary"
             android:fragment="com.bootleggers.dumpster.external.QsGridSettings" />
 
+        <com.bootleggers.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summary="@string/qs_tile_title_visibility_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

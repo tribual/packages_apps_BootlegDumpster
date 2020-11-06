@@ -224,4 +224,8 @@
     <string name="battery_percentage_off">Hidden</string>
     <string name="battery_percentage_inside_icon">Inside battery icon</string>
     <string name="battery_percentage_outside_icon">Outside battery icon</string>
+
+    <!-- QS tile visibility -->
+    <string name="qs_tile_title_visibility_title">Show tiles title</string>
+    <string name="qs_tile_title_visibility_summary">Show or hide the QS tiles title</string>
 </resources>
