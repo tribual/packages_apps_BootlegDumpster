@@ -20,8 +20,8 @@
     <com.bootleggers.dumpster.preferences.CategoryPreference
         android:key="device_extras_category"
         android:icon="@drawable/ic_subcategory_deviceextras"
-        android:title="@string/device_extras_fallback_title"
-        android:summary="@string/device_extras_fallback_summary" />
+        android:title="@string/device_extras_title_fallback"
+        android:summary="@string/device_extras_summary_fallback" />
 
     <com.bootleggers.dumpster.preferences.CategoryPreference
         android:key="app_related_category"

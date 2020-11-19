@@ -50,14 +50,19 @@
     <string name="fingerprint_summary">More than a safe-lock</string>
 
     <!-- Misc -->
-    <string name="device_extras_fallback_title">Device extras</string>
-    <string name="device_extras_fallback_summary">Device specific tweaks</string>
+    <string name="device_extras_title_fallback">Device extras</string>
+    <string name="device_extras_summary" formatted="false">Specific tweaks for your %1$s</string>
+    <string name="device_extras_summary_fallback">Specific tweaks for your device</string>
     <string name="app_related_title">App related tweaks</string>
     <string name="app_related_summary">Global changes for all apps</string>
     <string name="system_title">System features</string>
     <string name="system_summary">Some under the hood features</string>
     <string name="about_bootleg_title">About Bootleggers</string>
     <string name="about_bootleg_summary">Info about us and your build</string>
+
+    <!-- Device extras package -->
+    <string name="device_extras_package_name" translatable="false"/>
+    <string name="device_extras_activity_name" translatable="false"/>
 
     <!-- About Bootleggers  -->
     <string name="about_bootleg_small_title">About us</string>
