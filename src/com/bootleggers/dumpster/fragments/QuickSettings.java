@@ -3,6 +3,7 @@ package com.bootleggers.dumpster.fragments;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -37,12 +38,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
-        return false;
+        ContentResolver resolver = getActivity().getContentResolver();
+        switch (preference.getKey()) {
+            default:
+                return false;
+        }
     }
 
     @Override

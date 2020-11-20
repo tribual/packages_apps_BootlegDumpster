@@ -42,7 +42,7 @@ import java.util.List;
 
 
 public class PowerMenuSettings extends SettingsPreferenceFragment
-                implements Preference.OnPreferenceChangeListener {
+        implements OnPreferenceChangeListener {
 
 
     @Override
@@ -58,8 +58,11 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
-        return false;
+        ContentResolver resolver = getActivity().getContentResolver();
+        switch (preference.getKey()) {
+            default:
+                return false;
+        }
     }
 
     @Override

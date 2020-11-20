@@ -35,10 +35,12 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-
-    return false;
-
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        switch (preference.getKey()) {
+            default:
+                return false;
+        }
     }
 
     @Override

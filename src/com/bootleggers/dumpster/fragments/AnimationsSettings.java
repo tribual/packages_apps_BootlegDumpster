@@ -22,13 +22,23 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-public class AnimationsSettings extends SettingsPreferenceFragment {
+public class AnimationsSettings extends SettingsPreferenceFragment
+        implements OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.bootleg_dumpster_frag_animations);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        switch (preference.getKey()) {
+        	default:
+        		return false;
+        }
     }
 
     @Override
