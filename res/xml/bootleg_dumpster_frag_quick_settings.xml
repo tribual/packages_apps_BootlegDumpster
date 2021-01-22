@@ -19,6 +19,18 @@
     android:title="@string/quicksettings_title">
 
     <PreferenceCategory
+        android:key="quickset_tiles_cat"
+        android:title="@string/subcategory_quicksettings_tiles">
+
+        <Preference
+            android:key="qs_columns_rows_pref"
+            android:title="@string/qs_rows_columns_title"
+            android:summary="@string/qs_rows_columns_summary"
+            android:fragment="com.bootleggers.dumpster.external.QsGridSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="quickset_footer_cat"
         android:title="@string/subcategory_quicksettings_footer">
 

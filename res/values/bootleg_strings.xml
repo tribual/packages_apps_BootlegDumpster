@@ -21,6 +21,7 @@
     <!-- Subcategories -->
     <string name="subcategory_app_compatibility">Compatibility</string>
     <string name="subcategory_quicksettings_footer">Footer</string>
+    <string name="subcategory_quicksettings_tiles">Tiles</string>
 
     <!-- Interface -->
     <string name="statusbar_title">Status Bar</string>
@@ -196,5 +197,13 @@
     <!-- QS Custom Footer text -->
     <string name="footer_text_string_title">Customize footer text</string>
     <string name="footer_text_string_summary">Ideal to promote something, if empty, it\'ll show the default text</string> 
+
+    <!-- QS rows and columns -->
+    <string name="qs_rows_columns_title">QS rows and columns</string>
+    <string name="qs_rows_columns_summary">Change the grid size of the QS Tiles</string>
+    <string name="qs_rows_title">Rows</string>
+    <string name="qs_columns_title">Columns</string>
+    <string name="qs_portrait_category_title">Portrait</string>
+    <string name="qs_landscape_category_title">Landscape</string>
 
 </resources>
